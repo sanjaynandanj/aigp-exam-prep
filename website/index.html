@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIGP Exam Prep — Pass the IAPP AI Governance Professional</title>
+<meta name="description" content="72 lessons, 8 phases, 165 practice questions. A complete time-bound study system for the IAPP AIGP certification, mapped to BoK v2.1 (2026). Unofficial, free, open source.">
+<style>
+  :root{
+    --bg:#0d0b14; --bg2:#141020; --panel:#181327; --border:#2b2340;
+    --text:#ece9f4; --muted:#9a91b0; --dim:#655c80;
+    --accent:#a78bfa; --accent2:#60a5fa; --amber:#fbbf24; --rose:#fb7185; --green:#4ade80;
+    --mono:'SFMono-Regular',Consolas,'Cascadia Code',Menlo,monospace;
+    --sans:-apple-system,'Segoe UI',Inter,Roboto,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6}
+  a{color:var(--accent2);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:50;background:rgba(13,11,20,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:58px}
+  .logo{font-family:var(--mono);font-weight:700;font-size:15px;color:var(--text);letter-spacing:.5px}
+  .logo span{color:var(--accent)}
+  .nav-links{display:flex;gap:22px;font-size:14px}
+  .nav-links a{color:var(--muted)}
+  .nav-links a:hover{color:var(--text);text-decoration:none}
+  @media(max-width:720px){.nav-links{display:none}}
+  header{padding:80px 0 56px;text-align:center;background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(167,139,250,.09),transparent)}
+  .kicker{font-family:var(--mono);font-size:13px;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+  h1{font-size:clamp(32px,5.6vw,54px);line-height:1.1;font-weight:800;letter-spacing:-1px}
+  h1 em{font-style:normal;color:var(--accent)}
+  .tagline{margin:22px auto 0;max-width:660px;color:var(--muted);font-size:18px}
+  .tagline b{color:var(--text)}
+  .hero-stats{display:flex;justify-content:center;gap:38px;margin-top:36px;flex-wrap:wrap}
+  .hstat{font-family:var(--mono)}
+  .hstat .n{font-size:30px;font-weight:700;color:var(--text)}
+  .hstat .l{font-size:12px;color:var(--dim);letter-spacing:1px;text-transform:uppercase}
+  .cta-row{margin-top:36px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:12px 22px;border-radius:8px;font-size:15px;font-weight:600;border:1px solid var(--border);transition:.15s}
+  .btn.primary{background:var(--accent);color:#191036;border-color:var(--accent)}
+  .btn.primary:hover{filter:brightness(1.1);text-decoration:none}
+  .btn.ghost{color:var(--text)}
+  .btn.ghost:hover{border-color:var(--accent2);text-decoration:none}
+  .examfacts{margin:40px auto 0;max-width:860px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+  .ef{background:var(--panel);padding:14px 10px}
+  .ef .v{font-family:var(--mono);font-size:16px;font-weight:700;color:var(--accent)}
+  .ef .k{font-size:11.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.5px}
+  .notice{margin:26px auto 0;max-width:760px;font-size:12.5px;color:var(--dim);border:1px dashed var(--border);border-radius:8px;padding:10px 16px}
+  section{padding:68px 0;border-top:1px solid var(--border)}
+  h2{font-size:28px;font-weight:750;letter-spacing:-.5px;margin-bottom:8px}
+  .sub{color:var(--muted);margin-bottom:36px;max-width:720px}
+  .mono{font-family:var(--mono)}
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:22px}
+  .card h3{font-size:16px;margin-bottom:8px}
+  .card h3 .ico{color:var(--accent);font-family:var(--mono);margin-right:8px}
+  .card p{font-size:14px;color:var(--muted)}
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-bottom:14px}
+  .pbox{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:18px}
+  .pbox .plabel{font-size:13px;color:var(--muted);display:flex;justify-content:space-between;margin-bottom:10px}
+  .bar{height:8px;background:var(--bg2);border-radius:5px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--accent);border-radius:5px;transition:width .3s}
+  .reset{font-size:13px;color:var(--dim);background:none;border:none;cursor:pointer;font-family:var(--mono)}
+  .reset:hover{color:var(--rose)}
+  .countbox{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .countbox input{background:var(--bg2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:8px 12px;font-family:var(--mono);font-size:14px}
+  .countdown{font-family:var(--mono);font-size:15px;color:var(--muted)}
+  .countdown b{color:var(--accent);font-size:22px}
+  .phase{background:var(--panel);border:1px solid var(--border);border-radius:10px;margin-bottom:10px;overflow:hidden}
+  .phead{display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer;user-select:none}
+  .phead:hover{background:var(--bg2)}
+  .pnum{font-family:var(--mono);font-size:13px;color:var(--accent);min-width:34px}
+  .pname{font-weight:650;flex:1;font-size:15px}
+  .pmeta{font-family:var(--mono);font-size:12px;color:var(--dim);display:flex;gap:14px;align-items:center}
+  .badge{font-size:11px;padding:2px 8px;border-radius:20px;border:1px solid rgba(167,139,250,.4);color:var(--accent)}
+  .chev{color:var(--dim);transition:transform .2s;font-size:12px}
+  .phase.open .chev{transform:rotate(90deg)}
+  .plessons{display:none;border-top:1px solid var(--border)}
+  .phase.open .plessons{display:block}
+  .lesson{display:flex;align-items:center;gap:12px;padding:9px 18px;font-size:14px;border-bottom:1px solid rgba(43,35,64,.5)}
+  .lesson:last-child{border-bottom:none}
+  .lesson:hover{background:var(--bg2)}
+  .lesson input{accent-color:var(--accent);width:15px;height:15px;cursor:pointer;flex-shrink:0}
+  .lesson .lt{flex:1;color:var(--text)}
+  .lesson.done .lt{color:var(--dim);text-decoration:line-through}
+  .lesson .hrs{font-family:var(--mono);font-size:12px;color:var(--dim)}
+  .pprog{font-family:var(--mono);font-size:12px;color:var(--dim);min-width:52px;text-align:right}
+  .tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:44px}
+  .track{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:22px}
+  .track.rec{border-color:rgba(167,139,250,.5)}
+  .track .tname{font-weight:700;font-size:17px}
+  .track .tdur{font-family:var(--mono);color:var(--accent);font-size:26px;font-weight:700;margin:6px 0}
+  .track .tmeta{font-size:13px;color:var(--muted)}
+  .track .tag{float:right;font-size:11px;color:var(--accent);border:1px solid rgba(167,139,250,.4);padding:2px 8px;border-radius:20px}
+  .weeks{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin-top:10px}
+  .wk{height:58px;border-radius:6px;background:var(--panel);border:1px solid var(--border);font-family:var(--mono);font-size:10px;color:var(--dim);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-align:center}
+  .wk b{font-size:10px;color:var(--muted);font-weight:400}
+  .wk .dot{width:8px;height:8px;border-radius:50%}
+  @media(max-width:720px){.weeks{grid-template-columns:repeat(4,1fr)}}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font-size:12px;color:var(--muted);font-family:var(--mono)}
+  .legend .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
+  .cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .cap{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:22px;display:flex;flex-direction:column;gap:8px}
+  .cap .cn{font-family:var(--mono);font-size:12px;color:var(--accent)}
+  .cap h3{font-size:16px}
+  .cap p{font-size:13.5px;color:var(--muted);flex:1}
+  .cap .cm{font-family:var(--mono);font-size:12px;color:var(--dim)}
+  footer{border-top:1px solid var(--border);padding:44px 0;color:var(--dim);font-size:13px}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+  .foot a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap nav-inner">
+  <div class="logo">AIGP<span>/</span>PREP</div>
+  <div class="nav-links">
+    <a href="#method">Method</a><a href="#progress">Progress</a><a href="#curriculum">Curriculum</a>
+    <a href="#timeline">Timeline</a><a href="#practice">Practice</a>
+    <a href="https://github.com/sanjaynandanj/aigp-exam-prep" target="_blank">GitHub</a>
+  </div>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="kicker">IAPP · AI Governance Professional · BoK v2.1 (2026)</div>
+  <h1>AIGP <em>Exam Prep</em></h1>
+  <p class="tagline"><b>72 lessons. 8 phases. 165 practice questions.</b> A complete, phased, time-bound study system mapped lesson-by-lesson to the four BoK v2.1 domains.</p>
+  <div class="hero-stats">
+    <div class="hstat"><div class="n">72</div><div class="l">lessons</div></div>
+    <div class="hstat"><div class="n">8</div><div class="l">phases</div></div>
+    <div class="hstat"><div class="n">165</div><div class="l">practice Qs</div></div>
+    <div class="hstat"><div class="n">~82h</div><div class="l">coursework</div></div>
+    <div class="hstat"><div class="n">3</div><div class="l">tracks</div></div>
+  </div>
+  <div class="cta-row">
+    <a class="btn primary" href="#curriculum">Start studying</a>
+    <a class="btn ghost" href="#timeline">Pick a timeline</a>
+  </div>
+  <div class="examfacts">
+    <div class="ef"><div class="v">100 Q</div><div class="k">85 scored + 15 pilot</div></div>
+    <div class="ef"><div class="v">~165 min</div><div class="k">confirm in handbook</div></div>
+    <div class="ef"><div class="v">300/500</div><div class="k">passing score</div></div>
+    <div class="ef"><div class="v">~30%</div><div class="k">scenario-based</div></div>
+    <div class="ef"><div class="v">4 domains</div><div class="k">BoK v2.1 · Feb 2026</div></div>
+  </div>
+  <p class="notice">Unofficial study resource — not affiliated with or endorsed by the IAPP. Original synthesis of public laws and frameworks; verify exam logistics in the current candidate handbook and legal specifics against primary sources.</p>
+</div></header>
+
+<section id="method"><div class="wrap">
+  <h2>The method</h2>
+  <p class="sub">Reading is not preparation. This system is built around questions, spaced repetition, and a fixed exam date.</p>
+  <div class="grid3">
+    <div class="card"><h3><span class="ico">01</span>Book the exam first</h3><p>Step 0 of every track is scheduling the real exam. A fixed date concentrates effort; "when I feel ready" never arrives.</p></div>
+    <div class="card"><h3><span class="ico">02</span>Blueprint-weighted hours</h3><p>Domains II–IV carry ~70 of 85 scored questions. The plan allocates hours accordingly — the EU AI Act alone gets two full passes.</p></div>
+    <div class="card"><h3><span class="ico">03</span>Questions early and often</h3><p>A 20-question diagnostic before any studying, a gated 20-question quiz after every domain, and an 85-question timed mock in the final week.</p></div>
+    <div class="card"><h3><span class="ico">04</span>The question journal</h3><p>Every miss gets logged with why you missed it, then re-tested at +2 and +7 days. The journal, not the notes, is the real study asset.</p></div>
+    <div class="card"><h3><span class="ico">05</span>Memory hooks per lesson</h3><p>Each lesson ends with mnemonics, contrast tables, and "the 5 facts to retain" — the compression layer for final-week review.</p></div>
+    <div class="card"><h3><span class="ico">06</span>Background-aware shortcuts</h3><p>CIPP/E holders skim the GDPR lessons; CIPM holders skim program-building; everyone else takes the longer track. No wasted hours.</p></div>
+  </div>
+</div></section>
+
+<section id="progress"><div class="wrap">
+  <h2>Your progress</h2>
+  <p class="sub">Stored in your browser. Check lessons off in the curriculum below, and set your exam date.</p>
+  <div class="pgrid">
+    <div class="pbox"><div class="plabel"><span>Lessons</span><span class="mono" id="pl-lessons">0 / 72</span></div><div class="bar"><i id="pb-lessons"></i></div></div>
+    <div class="pbox"><div class="plabel"><span>Phases complete</span><span class="mono" id="pl-phases">0 / 8</span></div><div class="bar"><i id="pb-phases"></i></div></div>
+    <div class="pbox"><div class="plabel"><span>Hours logged</span><span class="mono" id="pl-hours">0 / 82</span></div><div class="bar"><i id="pb-hours"></i></div></div>
+  </div>
+  <div class="pbox" style="margin-bottom:14px"><div class="countbox">
+    <span style="font-size:13px;color:var(--muted)">Exam date:</span>
+    <input type="date" id="examdate" onchange="setExamDate(this.value)">
+    <span class="countdown" id="countdown"></span>
+  </div></div>
+  <button class="reset" onclick="resetProgress()">[ reset progress ]</button>
+</div></section>
+
+<section id="curriculum"><div class="wrap">
+  <h2>Curriculum — 8 phases, 4 BoK domains</h2>
+  <p class="sub">Tap a phase to expand its lessons. Badges show which BoK v2.1 domain each phase feeds. Hours shown per lesson.</p>
+  <div id="phases"></div>
+</div></section>
+
+<section id="timeline"><div class="wrap">
+  <h2>Time-bound tracks</h2>
+  <p class="sub">Same 72 lessons, three paces. Day-by-day plans live in <span class="mono">ROADMAP.md</span>. Quiz gates (14+/20) control advancement on every track.</p>
+  <div class="tracks">
+    <div class="track"><span class="tag">deadline-driven</span><div class="tname">Sprint</div><div class="tdur">4 weeks</div><div class="tmeta">~20 h/week · for CIPP/E-CIPM holders or full-time study · quizzes weekly, mock in week 4</div></div>
+    <div class="track rec"><span class="tag">recommended</span><div class="tname">Default</div><div class="tdur">8 weeks</div><div class="tmeta">~10 h/week · working professionals · one domain quiz per fortnight, mock + AI Act second pass in week 8</div></div>
+    <div class="track"><span class="tag">no prior exposure</span><div class="tname">Steady</div><div class="tdur">12 weeks</div><div class="tmeta">~7 h/week · second pass on Phase 4 · two full mocks · weekly glossary flashcards</div></div>
+  </div>
+  <h3 style="font-size:16px;margin-bottom:6px">The default 8 weeks at a glance</h3>
+  <div class="weeks" id="weeks"></div>
+  <div class="legend">
+    <span><span class="dot" style="background:#a78bfa"></span>foundations (Domain I)</span>
+    <span><span class="dot" style="background:#60a5fa"></span>laws & frameworks (Domain II)</span>
+    <span><span class="dot" style="background:#4ade80"></span>development & deployment (Domains III–IV)</span>
+    <span><span class="dot" style="background:#fb7185"></span>mock & exam</span>
+  </div>
+</div></section>
+
+<section id="practice"><div class="wrap">
+  <h2>Practice bank — 165 questions + diagnostic</h2>
+  <p class="sub">Original questions with full rationales — every distractor explained. All in <span class="mono">practice/</span>.</p>
+  <div class="cgrid" id="caps"></div>
+</div></section>
+
+<footer><div class="wrap foot">
+  <div>AIGP Exam Prep · MIT · unofficial, free forever · not affiliated with the IAPP</div>
+  <div><a href="#curriculum">Curriculum</a> · <a href="#timeline">Timeline</a> · <a href="#practice">Practice</a> · <a href="https://github.com/sanjaynandanj/aigp-exam-prep" target="_blank">GitHub</a></div>
+</div></footer>
+
+<script>
+const PHASES=[
+{n:"0",name:"Orientation & Study System",week:"Wk 1",dom:"—",lessons:[["The AIGP in 2026: format, scoring, booking, maintenance",1],["BoK v2.1 mapped: where the 85 points live",1],["The study system: recall, spacing, the question journal",1],["Baseline diagnostic: 20 questions before you study",1]]},
+{n:"1",name:"AI & ML Foundations",week:"Wk 1–2",dom:"Domain I",lessons:[["What is AI: OECD definition, AI vs automation",1],["Machine learning types: supervised, unsupervised, RL",1],["Neural networks & deep learning for governance people",1],["NLP, computer vision & the application families",1],["Generative AI: LLMs, foundation models, fine-tuning, RAG",1.5],["The AI tech stack: data, compute, models, applications",1],["Training vs inference; overfitting, drift, black boxes",1],["AI failure modes: bias, hallucination, brittleness, misuse",1],["Sociotechnical systems: risk is never just technical",0.75],["Domain I vocabulary drill: the 40 exam terms",0.75]]},
+{n:"2",name:"Responsible AI & Governance Foundations",week:"Wk 2–3",dom:"Domain I",lessons:[["Why AI governance: the harms taxonomy",1],["Trustworthy AI attributes: the seven characteristics",1],["Fairness: competing definitions, impossibility results",1.5],["Transparency & explainability: XAI, disclosures",1],["Accountability & human oversight: HITL, HOTL, HIC",1],["Privacy in AI: data protection principles vs models",1],["Ethics frameworks: OECD, UNESCO, industry principles",1],["Building the governance program: charters, policies, gates",1],["Governance roles: board to model owner",0.75],["Stakeholder engagement & AI ethics boards",0.75]]},
+{n:"3",name:"Current Law Applied to AI",week:"Wk 3–4",dom:"Domain II",lessons:[["GDPR × AI: lawful basis, minimization vs training data",1.5],["GDPR Article 22: automated decision-making edge cases",1],["DPIAs for AI; EU enforcement patterns",1],["US federal: FTC Section 5, EEOC, CFPB, sectoral",1.5],["US state laws: Colorado, BIPA, NYC LL144, California",1.5],["IP & copyright: training data, outputs, infringement",1.5],["Anti-discrimination: disparate treatment vs impact",1],["Product liability & consumer protection meets AI",1],["Sectoral deep-dives: employment, credit, health, insurance",1],["Cross-border: extraterritoriality & conflicts of law",1]]},
+{n:"4",name:"EU AI Act, NIST AI RMF & Standards",week:"Wk 4–5",dom:"Domain II",lessons:[["EU AI Act: structure, scope, the five actors",1.5],["Prohibited practices: the Article 5 list, memorized",1.5],["High-risk classification: Annex III + the flowchart",1.5],["High-risk obligations: provider & deployer duties",1.5],["GPAI & foundation models: tiers, systemic risk",1.5],["Conformity assessment, CE marking, notified bodies",1],["Enforcement: AI Office, penalties, the timeline",1],["NIST AI RMF: Govern, Map, Measure, Manage",1.5],["ISO/IEC 42001 & 23894: certifiable AI management",1],["Soft law: OECD, Council of Europe, UNESCO, G7",1],["Rest of world: UK, Canada, China, Singapore, Brazil",1],["Crosswalk drill: AI Act ↔ NIST RMF ↔ ISO 42001",1]]},
+{n:"5",name:"Governing AI Development",week:"Wk 5–6",dom:"Domain III",lessons:[["The AI lifecycle: stages, gates, interventions",1],["Use-case intake: definition, feasibility, ban lists",1],["Data governance: provenance, quality, labeling",1.5],["Training governance: documentation, versioning",1],["Testing & evaluation: fairness testing, red teaming",1.5],["Impact assessments: AIA vs DPIA vs FRIA vs conformity",1.5],["Documentation artifacts: model cards, datasheets",1],["Security in development: adversarial ML, poisoning",1],["Release gates & go/no-go decisions",1],["Provider vs deployer obligations across the lifecycle",0.75]]},
+{n:"6",name:"Governing Deployment & Use",week:"Wk 6–7",dom:"Domain IV",lessons:[["Deployment readiness: rollouts, shadow deployment",1],["Third-party & vendor AI risk: assessment, assurances",1.5],["Procurement: questions to ask before buying AI",1],["Monitoring in production: drift, decay, feedback loops",1.5],["Human oversight in operation: design, automation bias",1],["User-facing transparency: notices, labels, disclosures",1],["AI incident response & serious-incident reporting",1.5],["Auditing AI systems: internal, external, algorithmic",1],["Decommissioning: retirement, data disposition",0.75],["Organizational change: training, culture, rhythm",0.75]]},
+{n:"7",name:"Exam Skills & Mock Gauntlet",week:"Wk 7–8",dom:"All",lessons:[["Question anatomy: stems, distractors, scenario strategy",1],["Domain I quiz — 20 questions with rationales",1.5],["Domain II quiz — 20 questions with rationales",1.5],["Domain III quiz — 20 questions with rationales",1.5],["Domain IV quiz — 20 questions with rationales",1.5],["Full mock: 85 questions, timed, with rationale key",3]]}
+];
+const CAPS=[
+["DIAGNOSTIC","Baseline diagnostic — 20 Q","Take it cold on Day 1. Maps every miss to the exact phase and lesson to study, and calibrates your track choice.","practice/baseline-diagnostic.md"],
+["QUIZ 1","Domain I — 20 Q","Foundations of AI governance: definitions, ML types, trustworthy-AI attributes, fairness, oversight models, program structures.","practice/quiz-domain-1.md"],
+["QUIZ 2","Domain II — 20 Q","Laws, standards & frameworks: GDPR, US state laws, EU AI Act, NIST RMF, ISO 42001. The heaviest-weighted content.","practice/quiz-domain-2.md"],
+["QUIZ 3","Domain III — 20 Q","Governing development: data governance, testing, impact assessments, documentation, release gates.","practice/quiz-domain-3.md"],
+["QUIZ 4","Domain IV — 20 Q","Governing deployment & use: vendor risk, monitoring, oversight, incidents, audits, decommissioning.","practice/quiz-domain-4.md"],
+["MOCK","Full mock exam — 85 Q","Blueprint-weighted, ~30% scenario-based, timed at 165 minutes. Full rationale key plus an unofficial readiness estimate.","practice/mock-exam.md"],
+["JOURNAL","Question journal template","The +2/+7 day re-test system: log why you missed each question and retire it only after two clean re-tests.","practice/question-journal-template.md"],
+["GLOSSARY","150+ terms, exam-weighted","Every term the stems assume you know, with the ~30 highest-yield terms flagged for final-week flashcards.","GLOSSARY.md"]];
+const WEEKS=[["1","P0-1","#a78bfa"],["2","P2","#a78bfa"],["3","P3","#60a5fa"],["4","P3-4","#60a5fa"],["5","P4","#60a5fa"],["6","P5","#4ade80"],["7","P6","#4ade80"],["8","Mock+Exam","#fb7185"]];
+const TOTAL_HOURS=82;
+const store={get(){try{return JSON.parse(localStorage.getItem("aigpprep"))||{}}catch{return{}}},set(v){localStorage.setItem("aigpprep",JSON.stringify(v))}};
+function lid(pi,li){return pi+"-"+li}
+function render(){
+  const done=store.get();
+  document.getElementById("phases").innerHTML=PHASES.map((p,pi)=>{
+    const total=p.lessons.length, dn=p.lessons.filter((_,li)=>done[lid(pi,li)]).length;
+    const hrs=p.lessons.reduce((s,l)=>s+l[1],0);
+    return `<div class="phase" id="ph${pi}">
+      <div class="phead" onclick="togglePhase(${pi})">
+        <span class="pnum">P${p.n}</span><span class="pname">${p.name}</span>
+        <span class="pmeta"><span class="badge">${p.dom}</span><span>${p.week}</span><span>${total} lessons</span><span>~${Math.round(hrs*4)/4}h</span></span>
+        <span class="pprog">${dn}/${total}</span><span class="chev">▶</span>
+      </div>
+      <div class="plessons">${p.lessons.map((l,li)=>`
+        <label class="lesson ${done[lid(pi,li)]?'done':''}">
+          <input type="checkbox" ${done[lid(pi,li)]?'checked':''} onchange="toggleLesson(${pi},${li},this.checked)">
+          <span class="lt">${String(li+1).padStart(2,'0')} · ${l[0]}</span>
+          <span class="hrs">${l[1]}h</span>
+        </label>`).join("")}
+      </div></div>`;
+  }).join("");
+  document.getElementById("weeks").innerHTML=WEEKS.map(w=>`<div class="wk"><b>W${w[0]}</b><span class="dot" style="background:${w[2]}"></span>${w[1]}</div>`).join("");
+  document.getElementById("caps").innerHTML=CAPS.map(c=>`<div class="cap"><span class="cn">${c[0]}</span><h3>${c[1]}</h3><p>${c[2]}</p><span class="cm">${c[3]}</span></div>`).join("");
+  updateProgress(); renderCountdown();
+}
+function togglePhase(pi){document.getElementById("ph"+pi).classList.toggle("open")}
+function toggleLesson(pi,li,val){
+  const d=store.get(); if(val)d[lid(pi,li)]=1; else delete d[lid(pi,li)]; store.set(d);
+  const open=[...document.querySelectorAll(".phase.open")].map(e=>e.id);
+  render(); open.forEach(id=>document.getElementById(id)?.classList.add("open"));
+}
+function updateProgress(){
+  const done=store.get(); let dl=0,dh=0,dp=0,tl=0;
+  PHASES.forEach((p,pi)=>{let all=true;p.lessons.forEach((l,li)=>{tl++;if(done[lid(pi,li)]){dl++;dh+=l[1]}else all=false});if(all)dp++});
+  const set=(id,txt,bid,pct)=>{document.getElementById(id).textContent=txt;document.getElementById(bid).style.width=pct+"%"};
+  set("pl-lessons",`${dl} / ${tl}`,"pb-lessons",100*dl/tl);
+  set("pl-phases",`${dp} / ${PHASES.length}`,"pb-phases",100*dp/PHASES.length);
+  set("pl-hours",`${Math.round(dh)} / ${TOTAL_HOURS}`,"pb-hours",Math.min(100,100*dh/TOTAL_HOURS));
+}
+function setExamDate(v){const d=store.get();d.__exam=v;store.set(d);renderCountdown()}
+function renderCountdown(){
+  const d=store.get(), el=document.getElementById("countdown"), inp=document.getElementById("examdate");
+  if(d.__exam){inp.value=d.__exam;
+    const days=Math.ceil((new Date(d.__exam+"T00:00:00")-new Date())/86400000);
+    el.innerHTML=days>1?`<b>${days}</b> days to exam`:days===1?`<b>tomorrow</b> — journal sweep only`:days===0?`<b>today</b> — go get it`:`exam date passed — congratulations (or reschedule)`;
+  } else el.textContent="set a date — it's step 0 of every track";
+}
+function resetProgress(){if(confirm("Reset all progress (keeps exam date)?")){const d=store.get();const ex=d.__exam;localStorage.removeItem("aigpprep");if(ex){store.set({__exam:ex})}render()}}
+render();
+</script>
+</body>
+</html>
