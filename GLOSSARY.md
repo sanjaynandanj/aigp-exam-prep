@@ -94,6 +94,7 @@ Alphabetical, grouped A–Z. Definitions are deliberately **exam-oriented**: wha
 - **FLOPs** — Floating-point operations; the compute currency of the AI Act's 10^25 systemic-risk presumption.
 - **foundation model (high-yield)** — A model trained on broad data at scale, adaptable to many downstream tasks; the concept behind the AI Act's GPAI regime.
 - **four-fifths (80%) rule** — US employment screening heuristic: selection-rate ratio below 0.8 flags potential adverse impact warranting investigation — evidence, not proof.
+- **Frontier Safety Framework** — Google DeepMind's capability-triggered safety policy committing to pre-deployment evaluation and mitigations when a model crosses defined "Critical Capability Levels"; the Google peer of Anthropic's RSP and OpenAI's Preparedness Framework.
 - **FRIA (fundamental rights impact assessment) (high-yield)** — AI Act Article 27: pre-use assessment by deployers that are public bodies/private providers of public services, plus deployers using high-risk AI for credit scoring or life/health insurance pricing.
 - **FTC Act Section 5** — US prohibition on unfair or deceptive acts; the FTC's main AI enforcement hook (deceptive AI claims, unfair uses, algorithmic disgorgement remedies).
 
@@ -170,6 +171,7 @@ Alphabetical, grouped A–Z. Definitions are deliberately **exam-oriented**: wha
 - **opt-out (TDM reservation)** — Rightsholders' reservation of text-and-data-mining rights under EU copyright law; GPAI providers must maintain policies to identify and respect it.
 - **overfitting** — Memorizing training data at the expense of generalization: high training accuracy, poor real-world performance.
 - **override rate** — Share of AI recommendations that human overseers change; near-zero at high speed signals rubber-stamping.
+- **OWASP Top 10 for LLM Applications** — Ranked list of the ten most critical LLM-app risks (2025): LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure, LLM03 Supply Chain, LLM04 Data & Model Poisoning, LLM05 Improper Output Handling, LLM06 Excessive Agency, LLM07 System Prompt Leakage, LLM08 Vector & Embedding Weaknesses, LLM09 Misinformation, LLM10 Unbounded Consumption. Pair with MITRE ATLAS and NIST AI 100-2.
 
 ## P
 
@@ -196,6 +198,9 @@ Alphabetical, grouped A–Z. Definitions are deliberately **exam-oriented**: wha
 - **reinforcement learning** — Learning a policy from reward/penalty signals through interaction with an environment; contrast supervised (labels) and unsupervised (structure).
 - **representativeness** — Whether data reflects the population and conditions the system will actually serve; its absence is a root cause of group harm.
 - **reproducibility** — Ability to re-derive a model from versioned data, code, hyperparameters, seeds and environment; the technical backbone of auditability.
+- **Responsible AI Standard (Microsoft)** — Microsoft's internal v2 (2022) standard translating its six responsible-AI principles into testable requirements; operationalized via the Office of Responsible AI, Impact Assessment template and Sensitive Uses review.
+- **Responsible Scaling Policy (Anthropic)** — Capability-triggered governance regime using **AI Safety Levels (ASL-1…ASL-5)** that pre-commit the company to safety requirements as model capabilities cross defined thresholds; the clearest industry example of capability-conditional governance.
+- **Preparedness Framework (OpenAI)** — OpenAI's catastrophic-risk evaluation framework (cyber / CBRN / persuasion / model-autonomy) with capability thresholds and a Safety Advisory Group → board escalation path; peer of Anthropic's RSP and Google's Frontier Safety Framework.
 - **risk-based approach** — Calibrating obligations to the level of risk rather than regulating all AI identically; the design principle of the AI Act, NIST RMF and most governance programs.
 - **risk management system (AI Act Art. 9)** — The provider's continuous, iterative lifecycle process to identify, evaluate and mitigate high-risk-system risks — explicitly not a one-time checklist.
 - **robustness** — Maintaining performance under noise, perturbation, edge cases and shift; tested by stress and out-of-distribution evaluation.

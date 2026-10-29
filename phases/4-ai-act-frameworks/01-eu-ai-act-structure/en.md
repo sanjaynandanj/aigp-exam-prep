@@ -67,6 +67,20 @@ Covered (Art. 2 concept):
 4. **Minimal risk** → no new obligations (most AI: spam filters, games) — voluntary codes encouraged
 5. **GPAI models** → parallel horizontal regime with a systemic-risk tier (Lesson 05)
 
+### What has already applied (status snapshot)
+
+| Milestone | Date | What is live |
+|---|---|---|
+| Entry into force | 1 Aug 2024 | Clock starts; no duties yet |
+| First application wave | 2 Feb 2025 | **Art. 5 prohibitions** and the **AI-literacy duty** (Art. 4) across all providers/deployers |
+| Second wave | 2 Aug 2025 | **GPAI model** duties, **penalties** regime, governance bodies, notified-body chapters |
+| Third wave | 2 Aug 2026 | **Annex III high-risk** regime becomes generally applicable (deployer duties, FRIAs, registration, transparency-tier) |
+| Fourth wave | 2 Aug 2027 | **Annex I** safety-component high-risk; compliance deadline for pre-Aug-2025 GPAI models |
+
+**Commission soft-law to recognize:** AI Office **Guidelines on prohibited practices**, **Guidelines on the GPAI chapter**, **training-content-summary template**, and the **GPAI Code of Practice** (Transparency / Copyright / Safety & Security) — all pub. 2025, together with Member-State designations of market-surveillance authorities. The exam may test these at name level as the compliance scaffolding of the Act.
+
+**Flux warning:** a **Digital Omnibus / AI simplification package** proposed by the Commission in late 2025 contemplates targeted easing of documentation and registration duties and potential re-timing of some high-risk obligations pending harmonized-standards readiness. Learn the enacted baseline above; verify current dates before relying on them. (Lesson 07 drills the timeline.)
+
 ## CASES & EXAMPLES
 
 **Scenario 1 — Who's the provider?** A Dutch bank licenses a US vendor's credit-scoring engine, rebrands it "BankScore," and offers it to sister banks. *Analysis:* By affixing its own trademark to a high-risk system, the bank **becomes the provider** with full provider obligations; the US vendor must supply the technical documentation. Had the bank merely *used* the vendor's system under the vendor's name, it would be a deployer.

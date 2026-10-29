@@ -32,11 +32,30 @@ Modern AI is assembled, not built from scratch — every dependency is an attack
 | **Training data pipelines** | Poisoning of scraped or third-party data feeds | Provenance controls (Lesson 03), anomaly screening of data |
 | **Plugins/tools/APIs for LLM agents** | Indirect prompt injection, excessive permissions | Least-privilege tool access, output validation, human approval for consequential actions |
 
-### Reference frameworks (name level)
+### Reference frameworks
 
-- **MITRE ATLAS** — a knowledge base of adversarial ML tactics and techniques, modeled on MITRE ATT&CK, with real-world case studies. Use: threat modeling and red-team planning for AI systems.
-- **OWASP Top 10 for LLM Applications** — the ten most critical LLM app risks; prompt injection heads the list, alongside items like insecure output handling, training-data poisoning, and supply-chain vulnerabilities.
-- The EU AI Act's high-risk requirements include **accuracy, robustness and cybersecurity** — with resilience against attempts to exploit vulnerabilities (including data poisoning and adversarial examples) as an explicit concept.
+- **MITRE ATLAS** (Adversarial Threat Landscape for AI Systems) — a knowledge base of adversarial ML tactics and techniques, modeled on MITRE ATT&CK, with real-world case studies. Use: threat modeling and red-team planning for AI systems.
+- **NIST AI 100-2 (Adversarial Machine Learning taxonomy, 2024 update)** — the companion NIST publication naming the attack classes and defenses; aligns with RMF MEASURE and MANAGE.
+- **EU AI Act Art. 15** — high-risk systems must achieve **accuracy, robustness and cybersecurity**, with explicit **resilience against attempts to exploit vulnerabilities** including data poisoning, model poisoning, adversarial examples, model evasion, confidentiality attacks, and model flaws.
+
+### OWASP Top 10 for LLM Applications (2025)
+
+The OWASP Foundation's ranked list of the ten most critical risks for applications built on large language models. Memorize at **name + one-line** level — the exam loves "which OWASP risk is this scenario?"
+
+| # | Risk | One-line essence |
+|---|---|---|
+| LLM01 | **Prompt Injection** | Attacker inputs — direct or indirect, via retrieved content, images, tool outputs — override system instructions or exfiltrate data |
+| LLM02 | **Sensitive Information Disclosure** | Model reveals PII, secrets, proprietary data from training data, system prompts, context window, or tool responses |
+| LLM03 | **Supply Chain** | Compromised pretrained models, datasets, plugins, LoRA adapters, or dependencies in the LLM stack |
+| LLM04 | **Data and Model Poisoning** | Malicious training/fine-tuning/embedding data corrupts behavior or plants backdoors (merged training- and model-poisoning items from 2023) |
+| LLM05 | **Improper Output Handling** | Downstream systems trust LLM output verbatim — XSS, SQLi, SSRF, RCE from un-sanitized model outputs piped into browsers/DBs/shells |
+| LLM06 | **Excessive Agency** | Agent/tool integration has too-broad permissions, too much autonomy, or too much functionality — small compromise, large blast radius |
+| LLM07 | **System Prompt Leakage** | System prompts assumed secret leak via prompt injection or reflection, exposing policies, keys, or logic (new standalone entry in 2025) |
+| LLM08 | **Vector and Embedding Weaknesses** | RAG-specific: poisoned vector stores, embedding inversion leaking source text, cross-tenant leakage, access-control bypass through retrieval |
+| LLM09 | **Misinformation** | Confident wrong outputs — hallucination, over-reliance, unsafe code suggestions — reaching users as if authoritative |
+| LLM10 | **Unbounded Consumption** | Resource/cost attacks: denial-of-wallet (unbounded token spend), model DoS, model extraction via mass querying |
+
+**2025 vs 2023 deltas (exam trivia):** *System Prompt Leakage* and *Vector/Embedding Weaknesses* were added; *Model Denial of Service* broadened into *Unbounded Consumption*; *Training Data Poisoning* and *Model Theft* were restructured into *Data & Model Poisoning* (LLM04) with extraction folded under LLM10. OWASP also publishes a parallel **Top 10 for Agentic AI** covering tool misuse, goal manipulation, and multi-agent attack surfaces.
 
 ### Building security into development
 
@@ -77,6 +96,6 @@ The 5 facts to retain:
 3. **What makes *indirect* prompt injection different from direct jailbreaking?**
    The malicious instructions arrive inside content the model processes (webpages, emails, documents) rather than being typed by the attacker as the user — so any data source becomes an instruction channel.
 4. **Name the two reference frameworks for AI/LLM security and their roles.**
-   MITRE ATLAS — adversarial-ML tactics/techniques knowledge base for threat modeling; OWASP Top 10 for LLM Applications — ranked list of critical LLM app risks (prompt injection #1).
+   MITRE ATLAS — adversarial-ML tactics/techniques knowledge base for threat modeling; OWASP Top 10 for LLM Applications (2025) — ranked list of critical LLM app risks (LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure, LLM03 Supply Chain, LLM04 Data & Model Poisoning, LLM05 Improper Output Handling, LLM06 Excessive Agency, LLM07 System Prompt Leakage, LLM08 Vector/Embedding Weaknesses, LLM09 Misinformation, LLM10 Unbounded Consumption). Pair with NIST AI 100-2.
 5. **List three AI supply-chain risks beyond your own code.**
    Backdoored/poisoned pretrained weights from model hubs, compromised or vulnerable open-source packages, poisoned third-party/scraped data feeds (also: over-privileged LLM plugins/tools).

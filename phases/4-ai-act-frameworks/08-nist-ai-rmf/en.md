@@ -36,15 +36,22 @@ The NIST AI Risk Management Framework (AI RMF 1.0, January 2023) is the exam's b
 ### Profiles
 
 - **Use-case / sector profiles:** tailored implementations of the Core for a domain (e.g., hiring, lending) — "current profile" (where you are) vs "target profile" (where you should be), gap-driving.
-- **The Generative AI Profile (NIST AI 600-1, July 2024):** the cross-sectoral profile for GenAI, cataloguing **12 risks unique to or exacerbated by GenAI** — including confabulation (hallucination), dangerous/violent or CBRN-uplift content, data privacy, environmental impacts, harmful bias/homogenization, human-AI configuration (over-reliance/anthropomorphization), **information integrity** (mis/disinformation), **information security** (prompt injection, model theft), intellectual property, obscene/degrading content, and value-chain/component-integration risks — with suggested actions mapped to the four functions.
-- Related ecosystem to recognize: NIST's dioptra test platform, ARIA evaluation program, and the US AI Safety Institute lineage (renamed/reorganized over time — mention level).
+- **The Generative AI Profile (NIST AI 600-1, July 2024):** the cross-sectoral profile for GenAI, cataloguing **12 risks unique to or exacerbated by GenAI** — CBRN information or capabilities · confabulation (hallucination) · dangerous, violent or hateful content · data privacy · environmental impacts · harmful bias and homogenization · human-AI configuration (over-reliance, anthropomorphization) · **information integrity** (mis/disinformation, synthetic content) · **information security** (prompt injection, model theft, data exfiltration) · intellectual property · obscene/degrading/abusive content (incl. CSAM/NCII) · **value chain and component integration** — with ~200 suggested actions mapped to GOVERN/MAP/MEASURE/MANAGE.
+- **Companion NIST publications to recognize by name:**
+  - **AI 100-1** — the AI RMF 1.0 itself (Jan 2023).
+  - **AI 100-2 E2023/E2025** — *Adversarial Machine Learning* taxonomy of attacks & defenses (feeds MEASURE/MANAGE for security).
+  - **AI 100-4** — Reducing Risks Posed by Synthetic Content (provenance, watermarking, labeling).
+  - **AI 100-5** — Plan for Global Engagement on AI Standards.
+  - **SP 1270** — Towards a Standard for Identifying & Managing **Bias in AI** (systemic, computational/statistical, human-cognitive).
+- **Related NIST ecosystem:** the **Dioptra** open-source adversarial-ML test platform; the **ARIA** (Assessing Risks and Impacts of AI) evaluation program; and the former **US AI Safety Institute (USAISI)** housed in NIST — **renamed in June 2025 to the Center for AI Standards and Innovation (CAISI)** with its mission re-centered on standards development, pre-deployment evaluations, and international standards engagement (post-rescission of EO 14110). Mention-level only.
 
 ### Why the RMF matters legally (the bridges)
 
-- **Colorado AI Act:** compliance with the NIST AI RMF (or ISO 42001 etc.) supports the **rebuttable presumption of reasonable care**.
-- Referenced in US federal procurement/agency guidance; the de facto US governance vocabulary.
-- Crosswalks to **ISO/IEC 42001 and 23894**, the EU AI Act, and OECD — the connective tissue for one-program-many-laws compliance (Lesson 12).
+- **Colorado AI Act (SB 24-205):** compliance with the NIST AI RMF (or ISO 42001, or another nationally/internationally recognized framework identified by the AG) supports the **rebuttable presumption of reasonable care** against algorithmic-discrimination claims.
+- Referenced across US federal **agency AI guidance and procurement** (OMB M-24-10 for federal agencies survived EO changes in substance via M-25-21/-22; DoD RAI strategy; sector regulators) — the de facto US governance vocabulary even after EO 14110 was rescinded in Jan 2025 and partially replaced by **EO 14179** ("Removing Barriers to American Leadership in AI") and the **AI Action Plan (July 2025)**.
+- **Crosswalks** to ISO/IEC 42001, ISO/IEC 23894, the EU AI Act, OECD, and Singapore's AI Verify — connective tissue for one-program-many-laws compliance (Lesson 12).
 - Contrast anchor for the exam: **EU AI Act = binding product law; NIST RMF = voluntary process framework** — they answer different questions and pair well.
+- **Flux warning:** federal AI policy in the US shifted materially in 2025. The RMF *itself* was not withdrawn and remains the reference framework; what moved is the EO/OMB layer above it. Treat exam questions as testing the RMF substance, not the political overlay.
 
 ## CASES & EXAMPLES
 
